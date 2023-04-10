@@ -13,6 +13,14 @@ import { ManagerComponent } from './components/manager/manager.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { UserComponent } from './components/user/user.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MainComponent } from './main/main.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
+import { ManagerDashboardComponent } from './manager-dashboard/manager-dashboard.component';
+import { IndexComponent } from './components/index/index.component';
+import { DataTablesModule } from 'angular-datatables';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,11 +34,19 @@ import { FooterComponent } from './components/footer/footer.component';
     ManagerComponent,
     EmployeeComponent,
     UserComponent,
-    FooterComponent
+    FooterComponent,
+    MainComponent,
+    UserDashboardComponent,
+    AdminDashboardComponent,
+    EmployeeDashboardComponent,
+    ManagerDashboardComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DataTablesModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
