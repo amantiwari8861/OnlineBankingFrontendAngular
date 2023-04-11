@@ -27,13 +27,24 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules\\bootstrap\\dist\\css\\bootstrap.min.css",
-              "node_modules/datatables.net-dt/css/jquery.dataTables.css"
+              "node_modules/datatables.net-dt/css/jquery.dataTables.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/vendor/bootstrap-icons/bootstrap-icons.css",
+              "src/styles.css"
             ],
-            "scripts": ["node_modules\\bootstrap\\dist\\js\\bootstrap.min.js",
+            "scripts": [
             "node_modules/jquery/dist/jquery.js",
-            "node_modules/datatables.net/js/jquery.dataTables.js"
+            "node_modules/jquery/dist/jquery.min.js",
+            "node_modules/datatables.net/js/jquery.dataTables.js",
+            "src/assets/vendor/purecounter/purecounter_vanilla.js",
+            "src/assets/vendor/aos/aos.js",
+            "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+            "src/assets/vendor/bootstrap/js/bootstrap.js",
+            "src/assets/vendor/glightbox/js/glightbox.min.js",
+            "src/assets/vendor/isotope-layout/isotope.pkgd.min.js",
+            "src/assets/vendor/swiper/swiper-bundle.min.js",
+            "src/assets/vendor/php-email-form/validate.js",
+            "src/assets/js/main.js"
           ]
           },
           "configurations": {
@@ -101,7 +112,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         }
       }

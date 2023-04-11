@@ -8,10 +8,6 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 import { InternalservererrorComponent } from './components/internalservererror/internalservererror.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { AdminComponent } from './components/admin/admin.component';
-import { ManagerComponent } from './components/manager/manager.component';
-import { EmployeeComponent } from './components/employee/employee.component';
-import { UserComponent } from './components/user/user.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
@@ -21,6 +17,7 @@ import { ManagerDashboardComponent } from './manager-dashboard/manager-dashboard
 import { IndexComponent } from './components/index/index.component';
 import { DataTablesModule } from 'angular-datatables';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,23 +27,21 @@ import { HttpClientModule } from '@angular/common/http';
     InternalservererrorComponent,
     SignInComponent,
     SignUpComponent,
-    AdminComponent,
-    ManagerComponent,
-    EmployeeComponent,
-    UserComponent,
     FooterComponent,
     MainComponent,
     UserDashboardComponent,
     AdminDashboardComponent,
     EmployeeDashboardComponent,
     ManagerDashboardComponent,
-    IndexComponent
+    IndexComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DataTablesModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

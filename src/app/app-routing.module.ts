@@ -4,21 +4,24 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { IndexComponent } from './components/index/index.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
+import { LoginGuardService } from './components/sign-in/signin-guard.service';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
 import { ManagerDashboardComponent } from './manager-dashboard/manager-dashboard.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 
 const appRoutes: Routes = [
-  { path: 'web', component:IndexComponent },
+  { path: 'web', component:IndexComponent},
   { path: '', redirectTo: '/web', pathMatch: 'full' },
-  { path: 'login', component:SignInComponent },
-  { path: 'register', component:SignUpComponent },
-  { path: 'admin', component:AdminDashboardComponent },
-  { path: 'manager', component:ManagerDashboardComponent },
-  { path: 'employee', component:EmployeeDashboardComponent },
-  { path: 'user', component:UserDashboardComponent },
-  { path: 'user/:id', component: UserDashboardComponent },
+  { path: 'web/login', component:SignInComponent },
+  { path: 'web/register', component:SignUpComponent },
+  { path: 'web/admin', component:AdminDashboardComponent,
+    loadChildren:()=>import("./admin-dashboard/admin.module").then(m=>m.AdminModule)
+  },
+  { path: 'web/manager', component:ManagerDashboardComponent },
+  { path: 'web/employee', component:EmployeeDashboardComponent },
+  { path: 'web/user', component:UserDashboardComponent ,canActivate:[LoginGuardService],loadChildren:()=>import("./components/index/index-routing.module").then(i=>i.IndexRoutingModule) },
+  { path: 'web/user/:id', component: UserDashboardComponent },
   { path: '**', component: PagenotfoundComponent },
 ];
 @NgModule({
