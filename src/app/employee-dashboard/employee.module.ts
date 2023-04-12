@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EmployeeRoutingModule } from './employee-routing.module';
+import { EmployeeService } from '../services/employee.service';
 
 @NgModule({
     imports: [
@@ -10,6 +11,6 @@ import { EmployeeRoutingModule } from './employee-routing.module';
       EmployeeRoutingModule
     ],
     // declarations: [ OrderByPipe, RatingComponent],
-    // providers: [ProductService, AuthGuardService]
+    providers: [EmployeeService]
   })
   export class EmployeeModule { }

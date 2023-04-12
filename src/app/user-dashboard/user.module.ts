@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { UserRoutingModule } from './user-routing.module';
+import { CustomerService } from '../services/customer.service';
 
 @NgModule({
     imports: [
@@ -10,6 +11,6 @@ import { UserRoutingModule } from './user-routing.module';
       UserRoutingModule
     ],
     // declarations: [ OrderByPipe, RatingComponent],
-    // providers: [ProductService, AuthGuardService]
+    providers: [CustomerService]
   })
   export class UserModule { }

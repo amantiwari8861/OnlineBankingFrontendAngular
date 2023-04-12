@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SignInComponent } from './sign-in.component';
-import { LoginGuardService } from "./signin-guard.service";
-const bookRoutes: Routes = [
+import { LoginGuardService } from "../../guards/login-guard.service";
+const loginRoutes: Routes = [
     {
         path: '',
         component: SignInComponent,
@@ -10,7 +10,7 @@ const bookRoutes: Routes = [
     }
 ];
 @NgModule({
-    imports: [RouterModule.forChild(bookRoutes)],
+    imports: [RouterModule.forChild(loginRoutes)],
     exports: [RouterModule]
 })
 export class BookRoutingModule { }

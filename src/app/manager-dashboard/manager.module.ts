@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ManagerRoutingModule } from './manager-routing.module';
+import { ManagerService } from '../services/manager.service';
 
 @NgModule({
     imports: [
@@ -10,6 +11,6 @@ import { ManagerRoutingModule } from './manager-routing.module';
       ManagerRoutingModule
     ],
     // declarations: [ OrderByPipe, RatingComponent],
-    // providers: [ProductService, AuthGuardService]
+    providers: [ManagerService]
   })
   export class ManagerModule { }

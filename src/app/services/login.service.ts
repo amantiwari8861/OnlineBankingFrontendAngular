@@ -1,19 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { User } from "../../models/user";
+import { User } from "../models/user";
 const USERS = [
-    new User(1, 'admin', 'admin',"admin"),
-    new User(2, 'manager', 'manager',"manager"),
-    new User(3, 'employee', 'employee',"employee"),
-    new User(4, 'user', 'user',"user")
+    new User(1, 'admin', 'admin1234',"admin"),
+    new User(2, 'manager', 'manager1234',"manager"),
+    new User(3, 'employee', 'employee1234',"employee"),
+    new User(4, 'user', 'user1234',"user")
 ];
 const usersObservable = of(USERS);
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
-export class SignInService {
-    private isloggedIn = false;
+export class LoginService {
+
+  private isloggedIn = false;
     getAllUsers(): Observable<User[]> {
         return usersObservable;
     }

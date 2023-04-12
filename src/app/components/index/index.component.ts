@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 // import { cssworkspace } from "../../../assets/vendor/";
+// import "../../../assets/vendor/bootstrap/js/bootstrap.js"
+// import "node_modules/bootstrap/dist/js/bootstrap.js"
+
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
